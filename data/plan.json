@@ -1,0 +1,502 @@
+[
+    {
+        "name": "قهوة بالسكن ثم فطور",
+        "link": "https:\/\/maps.app.goo.gl\/ypeGfaVHvnCvida6A?g_st=ipc",
+        "day": "2",
+        "rating": 4,
+        "note": "مقترح فطور",
+        "checked": false,
+        "host": "فارس",
+        "image": "images\/plan_6881bc9ca6856.jpeg"
+    },
+    {
+        "name": "الصعود لجبل الطاولة",
+        "link": "https:\/\/maps.app.goo.gl\/x7p9bFYBtJnZ2Ewp8?g_st=ipc",
+        "day": "2",
+        "rating": 5,
+        "note": "زيارة معلم جبل الطاولة والصعود يكون بالتلفريك (افضل) او السيارة",
+        "checked": false,
+        "host": "فارس",
+        "image": "images\/plan_6881be0b7e2da.jpeg"
+    },
+    {
+        "name": "الرماية بأسلحة حقيقية",
+        "link": "https:\/\/maps.app.goo.gl\/4gut1QP1AqxybyGHA?g_st=ipc",
+        "day": "3",
+        "rating": 5,
+        "note": "تجربة استخدام اسلحة حقيقية تجربة خرافيه 🔥",
+        "checked": false,
+        "host": "فارس",
+        "image": "images\/plan_6881c2607fd9e.jpeg"
+    },
+    {
+        "name": "شاطئ بولدر (البطاريق)",
+        "link": "https:\/\/maps.app.goo.gl\/Gdb5uEJG1dnzSD568?g_st=ipc",
+        "day": "3",
+        "rating": 3,
+        "note": "مكان جميل لرؤية البطاريق والتمشية في المكان",
+        "checked": false,
+        "host": "فارس",
+        "image": "images\/plan_6881c1c43bf07.jpeg"
+    },
+    {
+        "name": "كيب بوينت",
+        "link": "https:\/\/maps.app.goo.gl\/q1im1z6EckFgLWJQA?g_st=ipc",
+        "day": "3",
+        "rating": 4,
+        "note": "مكان قريب من الرجاء الصالح \nتمشية وتشبع بصري",
+        "checked": false,
+        "host": "فارس",
+        "image": "images\/plan_6881c115cab17.jpeg"
+    },
+    {
+        "name": "رأس الرجاء الصالح",
+        "link": "https:\/\/maps.app.goo.gl\/Dkg7VRwTtZQrurUM8?g_st=ipc",
+        "day": "3",
+        "rating": 4,
+        "note": "زيارة رأس الرجاء الصالح مكان مشهور و يعتبر من اخر النقاط جنوب القارة الافريقية",
+        "checked": false,
+        "host": "فارس",
+        "image": "images\/plan_6881c0a6e4758.jpeg"
+    },
+    {
+        "name": "مقترح فطور",
+        "link": "https:\/\/maps.app.goo.gl\/tHUqmyzPUePN5tpA9?g_st=com.google.maps.preview.copy",
+        "day": "3",
+        "rating": 4,
+        "note": "مقترح فطور وكفي عليه مدح",
+        "checked": false,
+        "host": "فارس",
+        "image": "images\/default-location.png"
+    },
+    {
+        "name": "سكن اول 3 أيام في كيب تاون",
+        "link": "https:\/\/maps.app.goo.gl\/2jHvwKHnMAFx4P6n8?g_st=ipc",
+        "day": "1",
+        "rating": 4,
+        "note": "غرفتين وصالة وحمام ومطبخ \nوموقع الشقة رهييب - ب 290 ريال",
+        "checked": false,
+        "host": "فارس",
+        "image": "images\/plan_6877c7ab6f6ff.jpeg"
+    },
+    {
+        "name": "غدعش",
+        "link": "https:\/\/maps.app.goo.gl\/dp3KyP5f8hCZKQ5N6?g_st=ipc",
+        "day": "1",
+        "rating": 5,
+        "note": "بعد استلام السكن \nممكن ناكل من البرقر هذا\nعليه مدح 🤙🏼",
+        "checked": false,
+        "host": "فارس",
+        "image": "images\/plan_6881bb821fe86.jpeg"
+    },
+    {
+        "name": "تمشية خفيفة",
+        "link": "https:\/\/maps.app.goo.gl\/HgqdbBwysXU1BL7Y6?g_st=ipc",
+        "day": "1",
+        "rating": 3,
+        "note": "تمشية خفيفة بالمنطقة المحيطة \nقبل العودة للسكن",
+        "checked": false,
+        "host": "فارس",
+        "image": "images\/plan_6881bbf2a39a9.jpeg"
+    },
+    {
+        "name": "لعبة التوبيقان",
+        "link": "https:\/\/maps.app.goo.gl\/9A6Tf7jpdhk5ETjP6?g_st=ipc",
+        "day": "1",
+        "rating": 4,
+        "note": "فعالية التوبيقان بالمناظر الحلوه",
+        "checked": false,
+        "host": "فارس",
+        "image": "images\/plan_68873c96e363e.jpeg"
+    },
+    {
+        "name": "سكن في جورج",
+        "link": "https:\/\/maps.app.goo.gl\/czA8tFwPjTFHhgKZA?g_st=ipc",
+        "day": "4",
+        "rating": 4,
+        "note": "سكنا الرايق في مدينة جورج",
+        "checked": false,
+        "host": "فارس",
+        "image": "images\/default-location.png"
+    },
+    {
+        "name": "الى القاردن روت",
+        "link": "https:\/\/maps.app.goo.gl\/X4HoVwuVsCBDUbaGA?g_st=ipc",
+        "day": "4",
+        "rating": 4,
+        "note": "الاستمتاع في طريق القاردن روت N2 ..السكن في قرية ويلدرنيس \nللسكن",
+        "checked": false,
+        "host": "فارس",
+        "image": "images\/plan_6881c43651424.jpeg"
+    },
+    {
+        "name": "كفي للراحة",
+        "link": "https:\/\/maps.app.goo.gl\/dZtCkrUGNL3Znwa37?g_st=ipc",
+        "day": "4",
+        "rating": 4,
+        "note": "كفي في منتصف الطريق للنقنقة والراحة",
+        "checked": false,
+        "host": "فارس",
+        "image": "images\/plan_6881c4956ad70.jpeg"
+    },
+    {
+        "name": "حديقة حيوان كانجو",
+        "link": "https:\/\/maps.app.goo.gl\/L7soimc4z1cJ4BPK7?g_st=ipc",
+        "day": "5",
+        "rating": 3,
+        "note": "حديقة كانجو قريبة من قرية اودتشورن",
+        "checked": false,
+        "host": "فارس",
+        "image": "images\/plan_6881cb5c981c5.jpeg"
+    },
+    {
+        "name": "السفاري (المحمية)",
+        "link": "https:\/\/maps.app.goo.gl\/rBEXBi3Fr3KFGmVk8?g_st=ipc",
+        "day": "6",
+        "rating": 5,
+        "note": "زيارة السفاري ورؤية الحيوانات",
+        "checked": false,
+        "host": "فارس",
+        "image": "images\/plan_6881ce4c78683.jpeg"
+    },
+    {
+        "name": "قرية موسل باي",
+        "link": "https:\/\/maps.app.goo.gl\/xCkBmf5t7bxUvLvE9?g_st=ipc",
+        "day": "6",
+        "rating": 3,
+        "note": "التجول في قرية موسل باي",
+        "checked": false,
+        "host": "فارس",
+        "image": "images\/plan_6881cd1623542.jpeg"
+    },
+    {
+        "name": "تمشية في جورج",
+        "link": "https:\/\/maps.google.com\/?q=York%20St,%20George,%20%D8%AC%D9%86%D9%88%D8%A8%20%D8%A3%D9%81%D8%B1%D9%8A%D9%82%D9%8A%D8%A7&ftid=0x1dd6054a783f1c67:0x55eecf549bfefcb9&entry=gps&lucs=,94224825,94227247,94227248,94231188,47071704,47069508,94218641,94282134,94203019,47084304&g_st=ipc",
+        "day": "6",
+        "rating": 3,
+        "note": "تمشي واستكشاف قرية جورج",
+        "checked": false,
+        "host": "فارس",
+        "image": "images\/default-location.png"
+    },
+    {
+        "name": "مزرعة الفراولة",
+        "link": "https:\/\/maps.app.goo.gl\/c5MyuH6e83WzSv1B6?g_st=ipc",
+        "day": "7",
+        "rating": 3,
+        "note": "جولة في المزرعة وقطف الفراولة",
+        "checked": false,
+        "host": "فارس",
+        "image": "images\/plan_6881caeba62a3.jpeg"
+    },
+    {
+        "name": "متحف القطارات القديمة",
+        "link": "https:\/\/maps.app.goo.gl\/R1Na6tVqBgRA6gHSA?g_st=ipc",
+        "day": "8",
+        "rating": 3,
+        "note": "متحف قطارات وسيارات قديمة",
+        "checked": false,
+        "host": "فارس",
+        "image": "images\/plan_6881ca6961586.jpeg"
+    },
+    {
+        "name": "التوجه ل نايزنا",
+        "link": "https:\/\/maps.app.goo.gl\/uWoqyUVECc69XarE6?g_st=ipc",
+        "day": "8",
+        "rating": 3,
+        "note": "التوجه للسكن في قرية نايزنا",
+        "checked": false,
+        "host": "فارس",
+        "image": "images\/plan_6881cec8b091e.jpeg"
+    },
+    {
+        "name": "سنتر قرية نايزنا",
+        "link": "https:\/\/maps.app.goo.gl\/KbBFig5iCDRWvHLi7?g_st=ipc",
+        "day": "8",
+        "rating": 4,
+        "note": "الواترفرونت حق نايزنا مكان تمشي وفيه كافهيات ومطاعم",
+        "checked": false,
+        "host": "فارس",
+        "image": "images\/plan_6881cf9fc35db.jpeg"
+    },
+    {
+        "name": "مطعم بيتزا 🍕 وباستا 🍝",
+        "link": "https:\/\/maps.app.goo.gl\/7yb52ZNxewi3gCBW8",
+        "day": "8",
+        "rating": 5,
+        "note": "مطعم بيتزا فيه اكل حلال",
+        "checked": false,
+        "host": "أبوسمو",
+        "image": "images\/plan_6892eda0a6b59.jpg"
+    },
+    {
+        "name": "حديقة الفيلة",
+        "link": "https:\/\/maps.app.goo.gl\/7dimQRy8VxibFvtEA?g_st=ipc",
+        "day": "8",
+        "rating": 3,
+        "note": "",
+        "checked": false,
+        "host": "فارس",
+        "image": "images\/plan_6881cff855dde.png"
+    },
+    {
+        "name": "سكن بليتنبيرغ باي",
+        "link": "https:\/\/maps.app.goo.gl\/jTPrYfJnZq9yw3f37?g_st=ipc",
+        "day": "8",
+        "rating": 4,
+        "note": "سكن اليوم السابع والثامن",
+        "checked": false,
+        "host": "فارس",
+        "image": "images\/plan_689444f509913.jpeg"
+    },
+    {
+        "name": "القفز من الجسر",
+        "link": "https:\/\/maps.app.goo.gl\/QvD91d8gYHJa6YGe7?g_st=ipc",
+        "day": "9",
+        "rating": 4,
+        "note": "",
+        "checked": false,
+        "host": "فارس",
+        "image": "images\/default-location.png"
+    },
+    {
+        "name": "كاياك",
+        "link": "https:\/\/maps.app.goo.gl\/bUruKCaNF2iJxjDc6?g_st=ipc",
+        "day": "10",
+        "rating": 4,
+        "note": "التجديف في النهر",
+        "checked": false,
+        "host": "فارس",
+        "image": "images\/default-location.png"
+    },
+    {
+        "name": "مكان جميل للمشي",
+        "link": "https:\/\/maps.app.goo.gl\/YuhhQwAeDbE5Xy6E9?g_st=ipc",
+        "day": "10",
+        "rating": 3,
+        "note": "يبدو انه مسار طويل للمشي وتأمل الطبيعة",
+        "checked": false,
+        "host": "فارس",
+        "image": "images\/default-location.png"
+    },
+    {
+        "name": "منتزه كبير",
+        "link": "https:\/\/maps.app.goo.gl\/ZRX4w7PKX2preDUb7?g_st=ipc",
+        "day": "10",
+        "rating": 5,
+        "note": "منتزه جميل فيه الكثير من الفعاليات مثل الكياك والقفز من الجسر والتمشي فيه ولكن يحتاج لياقة",
+        "checked": false,
+        "host": "فارس",
+        "image": "images\/plan_6882011ca3860.jpeg"
+    },
+    {
+        "name": "زيارة اطول زيبلاين",
+        "link": "https:\/\/maps.app.goo.gl\/yLwZLof5z6KPgU1b7?g_st=ipc",
+        "day": "10",
+        "rating": 4,
+        "note": "زيبلاين طويل بين نايزنا و بليتينبيرغ باي يستحق التجربة",
+        "checked": false,
+        "host": "فارس",
+        "image": "images\/plan_6881ffd6ed3eb.jpeg"
+    },
+    {
+        "name": "ملحمة بسم الله",
+        "link": "https:\/\/maps.app.goo.gl\/Bw4L1GFAG3bCxuYS6?g_st=ipc",
+        "day": "12",
+        "rating": 5,
+        "note": "ملحمة به لحم حلال لكن يصك 6 كود ننتبه",
+        "checked": false,
+        "host": "فارس",
+        "image": "images\/plan_6898d5da3895d.jpeg"
+    },
+    {
+        "name": "زيارة حي بوكاب",
+        "link": "https:\/\/maps.app.goo.gl\/AJCYnLcUphSSZvBb7?g_st=ipc",
+        "day": "12",
+        "rating": 3,
+        "note": "حي بوكاب هو حي المسلمين في كيب تاون هو اللي فيه بيوت ملونه",
+        "checked": false,
+        "host": "فارس",
+        "image": "images\/plan_6881bf2e7bcfb.jpeg"
+    },
+    {
+        "name": "جبل الطاولة",
+        "link": "https:\/\/maps.app.goo.gl\/789H2EJbGnucpNQZ9?g_st=ipc",
+        "day": "12",
+        "rating": 5,
+        "note": "الطاولة لجبل الطاولة بالتلفريك",
+        "checked": false,
+        "host": "فارس",
+        "image": "images\/plan_68873e5bb14ff.jpeg"
+    },
+    {
+        "name": "الواترفرونت (الواجهة البحرية)",
+        "link": "https:\/\/maps.app.goo.gl\/dFafb54hFQg51Z7s9?g_st=ipc",
+        "day": "12",
+        "rating": 4,
+        "note": "فيه مطاعم وكافيهات واسواق ومكان جميل للتمشية",
+        "checked": false,
+        "host": "فارس",
+        "image": "images\/plan_6881bfda69d11.jpeg"
+    },
+    {
+        "name": "الهيلوكبتر",
+        "link": "https:\/\/maps.app.goo.gl\/4rV61a6AA85WAj6j8?g_st=ipc",
+        "day": "12",
+        "rating": 5,
+        "note": "تجربة الهيلوكبتر حول كيب تاون \nتجربة حلوه لكن كود نشوف السعر هل هو يناسب او لا",
+        "checked": false,
+        "host": "فارس",
+        "image": "images\/plan_6882053e31c22.jpeg"
+    },
+    {
+        "name": "معرض الأسماك",
+        "link": "https:\/\/maps.app.goo.gl\/umB8NhexVYMtrvhUA?g_st=ipc",
+        "day": "12",
+        "rating": 3,
+        "note": "فعالية بالوتر فرونت نشيك عليه اذا هي حلوه ولا تمشينا بالمنطقة اللي حوله",
+        "checked": false,
+        "host": "فارس",
+        "image": "images\/plan_68820406aa58e.jpeg"
+    },
+    {
+        "name": "محل شوكلاته",
+        "link": "https:\/\/maps.app.goo.gl\/aWTtkZGEfuXJ1ML86?g_st=ipc",
+        "day": "13",
+        "rating": 4,
+        "note": "محل شوكلاته للي يبي هدايا",
+        "checked": false,
+        "host": "فارس",
+        "image": "images\/plan_689b0ff6e6b49.jpeg"
+    },
+    {
+        "name": "كفي اسبريسولاب ناخذ منه محصول",
+        "link": "https:\/\/maps.app.goo.gl\/uqUiMGiCw1kwm1R77?g_st=ipc",
+        "day": "13",
+        "rating": 4,
+        "note": "كفي ناخذ منه محاصيل",
+        "checked": false,
+        "host": "فارس",
+        "image": "images\/default-location.png"
+    },
+    {
+        "name": "كفي اورجين",
+        "link": "https:\/\/maps.app.goo.gl\/yYhRF96y4vMTtkNz7?g_st=ipc",
+        "day": "13",
+        "rating": 4,
+        "note": "ممكن ناخذ منه محاصيل",
+        "checked": false,
+        "host": "فارس",
+        "image": "images\/default-location.png"
+    },
+    {
+        "name": "تروث كافي",
+        "link": "https:\/\/maps.app.goo.gl\/DeJqJqUimXkhJ5jg9?g_st=ipc",
+        "day": "13",
+        "rating": 4,
+        "note": "كفي تروث باخذ منه محصول",
+        "checked": false,
+        "host": "فارس",
+        "image": "images\/default-location.png"
+    },
+    {
+        "name": "مول كانال",
+        "link": "https:\/\/maps.app.goo.gl\/1g2LgKHcv8wPw9jD8?g_st=ipc",
+        "day": "13",
+        "rating": 4,
+        "note": "افضل مول في كيب تاون",
+        "checked": false,
+        "host": "فارس",
+        "image": "images\/plan_68873ee3aa7d8.png"
+    },
+    {
+        "name": "مطل على الغروب",
+        "link": "https:\/\/maps.app.goo.gl\/uji9GYwUJXD1LiiW7?g_st=ipc",
+        "day": "13",
+        "rating": 3,
+        "note": "مطل سقينال هيل .. جميل يصلح اسكتنان وقت الغروب",
+        "checked": false,
+        "host": "فارس",
+        "image": "images\/plan_6882082e6970c.jpeg"
+    },
+    {
+        "name": "خليج وشاطئ كامبس",
+        "link": "https:\/\/maps.app.goo.gl\/otpPCNQF5wvB32jT7?g_st=ipc",
+        "day": "13",
+        "rating": 4,
+        "note": "جهة الأغنياء والبيوت الراقية مكان للتشبع البصري والشاطئ فيها جميل",
+        "checked": false,
+        "host": "فارس",
+        "image": "images\/plan_688205c720368.jpeg"
+    },
+    {
+        "name": "حديقة رستن بوش",
+        "link": "https:\/\/maps.app.goo.gl\/T8P34BLggfFLD6eJA?g_st=ipc",
+        "day": "13",
+        "rating": 4,
+        "note": "حديقة جميلة الطبيعة فيها من كل مكان تصلح للجلسة وللتمشية",
+        "checked": false,
+        "host": "فارس",
+        "image": "images\/plan_6881bea9ace64.jpeg"
+    },
+    {
+        "name": "مزرعة النعام",
+        "link": "https:\/\/maps.app.goo.gl\/ifhtKRjaXTnvWzEX8?g_st=ipc",
+        "day": "13",
+        "rating": 4,
+        "note": "مزرعة ومطعم  يقدمون فيه اللحم بعدة طرق منها برقر النعام",
+        "checked": false,
+        "host": "فارس",
+        "image": "images\/plan_68820613417d5.jpeg"
+    },
+    {
+        "name": "العودة الى كيب تاون",
+        "link": "https:\/\/maps.app.goo.gl\/jEoBMcg6ZrNdkwGBA?g_st=ipc",
+        "day": "11",
+        "rating": 4,
+        "note": "العودة الى كيب تاون والاستمتاع في الخط وناخذه على رواقه",
+        "checked": false,
+        "host": "فارس",
+        "image": "images\/plan_688202f32bb7c.jpeg"
+    },
+    {
+        "name": "سكن اخر ايام في كيب تاون",
+        "link": "https:\/\/maps.app.goo.gl\/bEfbZLcCpN6hMugd7?g_st=ipc",
+        "day": "11",
+        "rating": 4,
+        "note": "سكن في منطقة سي بوينت",
+        "checked": false,
+        "host": "فارس",
+        "image": "images\/default-location.png"
+    },
+    {
+        "name": "زيبلاين موسل باي",
+        "link": "https:\/\/maps.app.goo.gl\/wRWnC4Di8ssYzyFx9?g_st=ipc",
+        "day": "11",
+        "rating": 3,
+        "note": "",
+        "checked": false,
+        "host": "فارس",
+        "image": "images\/plan_6881cd69e7df0.jpeg"
+    },
+    {
+        "name": "كهوف صغيره عند الساحل",
+        "link": "https:\/\/maps.app.goo.gl\/oRc5ci1FoqqSbXcX6?g_st=ipc",
+        "day": "11",
+        "rating": 3,
+        "note": "جولة مشي على الساحل في موسل باي وفيها كهوف صغيرة اشكالها جميلة",
+        "checked": false,
+        "host": "فارس",
+        "image": "images\/plan_6881cdf6bf5d8.jpeg"
+    },
+    {
+        "name": "متجر الصبار",
+        "link": "https:\/\/maps.app.goo.gl\/Mvw7mXaNjGzcD1kK6?g_st=ipc",
+        "day": "11",
+        "rating": 3,
+        "note": "متجر وكفي وفطور بنفس الوقت\nفيه كريمات يصلحهن هدايا للزوجة سواءً المسيار او غيرها 😜",
+        "checked": false,
+        "host": "فارس",
+        "image": "images\/plan_6881c7751434f.jpeg"
+    }
+]

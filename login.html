@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>تسجيل الدخول</title>
+    <link rel="stylesheet" href="style.css?v=2" />
+    <style>
+        .login-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .login-box {
+            background-color: #ffffffd1;
+            padding: 30px 60px;
+            border-radius: 1rem;
+            box-shadow: 0 0 10px #0000003b;
+            max-width: 350px;
+            font-size: 20px;
+            width: 90%;
+        }
+
+        .login-box h2 {
+            background: #0a4473;
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .login-box input {
+            width: 50%;
+            padding: 12px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            margin-bottom: 15px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .login-box button {
+            width: 100%;
+            padding: 12px;
+            background-color: #3ca370;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-wrapper">
+        <div class="login-box">
+            <h2>سجل دخولك</h2>
+            <input type="text" id="login-code" placeholder="أدخل رمز الدخول" />
+            <button onclick="login()">دخول</button>
+        </div>
+    </div>
+
+    <script>
+        function login() {
+      const code = document.getElementById("login-code").value.trim();
+      if (!code) return alert("أدخل رمز الدخول");
+
+      fetch("data/users.json?v=" + Date.now())
+        .then(res => res.json())
+        .then(users => {
+          const user = users.find(u => u.code === code);
+          if (!user) {
+            alert("رمز الدخول غير صحيح ❌");
+          } else {
+            localStorage.setItem("userName", user.name);
+            window.location.href = "index.html";
+          }
+        });
+    }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>لوحة التحكم</title>
+    <link rel="stylesheet" href="style.css?v=3" />
+    <link rel="icon" href="favicon.png" type="image/png">
+</head>
+
+<body class="admin-body">
+    <h1>لوحة تحكم الأدمن</h1>
+
+
+    <div id="admin-panel" class="panel hidden">
+        <div style="text-align: center; margin: 20px;">
+            <a href="index.html" target="_blank">
+                <button style="padding: 10px 20px; background-color: #0a4473; color: white; border: none; border-radius: 8px; cursor: pointer;">
+              صفحة الموقع
+            </button>
+            </a>
+        </div>
+        <div class="admin-section">
+            <h3>العنوان</h3>
+            <div style="text-align: center;">
+                <input id="input-title" type="text" placeholder="اكتب اسم الوجهة" style="font-size: 20px; text-align: center; border-radius: 8px; border: 1px solid #ccc; padding: 6px; width: 80%;" />
+            </div>
+        </div>
+        
+        <div class="admin-section">
+            <h3>القطة والعملات</h3>
+            <div class="group">
+                <div class="amount-currency-row">
+                    <label for="input-budget" style="width: 100px;">القطة:</label>
+                    <input type="number" id="input-budget" placeholder="مبلغ القطة">
+                </div>
+        
+                <div class="amount-currency-row">
+                    <label for="input-main-currency">العملة الرئيسية:</label>
+                    <input type="text" id="input-main-currency">
+                </div>
+                <div class="amount-currency-row">
+                    <label for="input-rate">سعر الصرف:</label>
+                    <input type="number" id="input-rate">
+                </div>
+                <div class="amount-currency-row">
+                    <label for="input-alt-currency">العملة الأجنبية:</label>
+                    <input type="text" id="input-alt-currency">
+                </div>
+            </div>
+        </div>
+
+        <div class="admin-section">
+            <h3>الأشخاص</h3>
+            <div id="people-list" class="editable-list sub-group"></div>
+            <button onclick="addNewItem('person')">➕ إضافة شخص</button>
+        </div>
+
+        <div class="admin-section">
+            <h3>الفئات</h3>
+            <div id="categories-list" class="editable-list sub-group"></div>
+            <button onclick="addNewItem('category')">➕ إضافة فئة</button>
+        </div>
+
+        <div class="admin-section">
+            <h3>إدارة المستخدمين</h3>
+            <div id="users-list" class="editable-list sub-group"></div>
+        
+            <div style="display: flex; gap: 10px; margin-top: 10px;align-items: center;">
+                <input type="text" id="new-user-code" placeholder="رمز الدخول الجديد" style="flex: 1; padding: 8px;" />
+                <input type="text" id="new-user-name" placeholder="اسم المستخدم الجديد" style="flex: 1; padding: 8px;" />
+                <button onclick="addNewUser()" style="padding: 0px 0px;width: 40px;height: 40px;">➕</button>
+            </div>
+        </div>
+
+        <div class="admin-section">
+            <h3>التحكم في الألوان</h3>
+            <h4>صفحة الإحصائيات</h4>
+            <div class="color-group">
+                <label>لون خلفية العنوانين:
+                  <input type="color" id="color-title">
+                </label>
+                <label>لون نص العنوان:
+                   <input type="color" id="color-title-text">
+                        </label>
+                <label>خلفية الفئات:
+                  <input type="color" id="color-categories-bg">
+                </label>
+                <label>خلفية الأشخاص:
+                  <input type="color" id="color-people-bg">
+                </label>
+                <label>خلفية الأرقام:
+                  <input type="color" id="color-number-bg">
+                </label>
+                <label>لون الأرقام:
+                  <input type="color" id="color-number-text">
+                </label>
+                <label>لون خلفية الموقع بالكامل:
+                  <input type="color" id="color-body-bg">
+                </label>
+            </div>
+            <h4>صفحة إضافة مشتريات</h4>
+            <div class="color-group">
+                <label>خلفية الأشخاص:
+                              <input type="color" id="color-payers-bg">
+                            </label>
+                <label>خلفية الفئات:
+                              <input type="color" id="color-categories-form-bg">
+                            </label>
+                <label>لون الكتابات:
+                              <input type="color" id="color-payers-text">
+                            </label>
+            </div>
+        </div>
+
+        <div class="admin-section">
+            <h3>صور العملات</h3>
+            <div style="display: flex; gap: 20px; align-items: center; flex-wrap: wrap;">
+                <div style="text-align: center;">
+                    <img id="current-sar-img" src="images/sar.png" alt="ريال" style="width: 60px; height: 60px; object-fit: contain; border-radius: 8px;" />
+                    <input type="file" id="sar-img-input" accept="image/*" />
+                </div>
+        
+                <div style="text-align: center;">
+                    <img id="current-zar-img" src="images/zar.png" alt="راند" style="width: 60px; height: 60px; object-fit: contain; border-radius: 8px;" />
+                    <input type="file" id="zar-img-input" accept="image/*" />
+                </div>
+        
+                <button onclick="uploadCurrencyImages()">📤 رفع</button>
+            </div>
+        </div>
+        
+        <div class="admin-section">
+            <h3>الحفظ وإعادة الضبط</h3>
+            <div class="sub-group">
+                <button onclick="saveAllChanges()">💾 حفظ كل التعديلات</button>
+                <button onclick="resetEntries()" style="background-color:red">🗑️ حذف كل المشتريات</button>
+                <button onclick="resetPlan()" style="background-color:darkred; color:white;">🗑️ حذف مخطط الرحلة</button>
+            </div>
+        </div>
+
+        
+
+    </div>
+
+    <script src="admin.js?v=3"></script>
+</body>
+
+</html>

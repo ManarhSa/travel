@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>المنطقة - مصروفات السفر</title>
+    <link rel="stylesheet" href="style.css?v=9" />
+    <link rel="icon" href="favicon.png" type="image/png">
+    <style>body {display: none;}</style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+<body>
+    <div class="top-bar">
+        <h1 id="page-title">...</h1>
+        <div class="welcome-user" style="text-align:center;margin:10px 0;font-size:16px;color:#555;">
+            مرحباً <strong id="welcome-user">...</strong>
+        </div>
+        <div class="buttons-scroll">
+            <button onclick="showSection('main')">الإحصائيات</button>
+            <button onclick="showSection('form')">إضافة مشتريات</button>
+            <button onclick="showSection('converter')">محول العملات</button>
+            <button onclick="showSection('plan')">مخطط الرحلة</button>
+            <button onclick="showSection('entries')">جدول المشتريات</button>
+        </div>
+        <style>
+            #entries-table td {
+                white-space: pre-wrap;
+            }
+        </style>
+    </div>
+
+    
+
+    <div class="container">
+        <!-- الإحصائيات -->
+        <div class="stats" id="main">
+            <div class="totals">
+                <div class="box green">
+                    <span>القطة</span>
+                    <strong id="total-budget">0</strong>
+                    <span id="base-currency-label"style="display: none;">العملة الرئيسية</span>
+                    <div id="per-person" style="text-align: center; color: #fff;"></div>
+                </div>
+                <div class="box black">
+                    <span>المصروفات</span><strong id="total-expense">0</strong><span id="base-currency-label-2">العملة الرئيسية</span>
+                </div>
+                <div class="box red">
+                    <span>باقي القطة</span><strong id="remaining">0</strong><span id="base-currency-label-3">العملة الرئيسية</span>
+                </div>
+            </div>
+
+            <h2>الإحصائيات</h2>
+            <div class="category-boxes" id="categories"></div>
+
+            <h2>إجمالي دفع كل شخص</h2>
+            <div class="category-boxes" id="people"></div>
+        </div>
+
+        <!-- نموذج الإضافة -->
+        <div id="form" class="hidden">
+            <h2>من دفع؟</h2>
+            <div class="options" id="payers"></div>
+
+            <h2>المبلغ المدفوع</h2>
+            <div class="amount-currency-row">
+                <input type="number" id="amount" placeholder="أدخل المبلغ">
+                <button type="button" id="btn-main-currency" class="active-currency">العملة الرئيسية</button>
+                <button type="button" id="btn-foreign-currency">العملة الأجنبية</button>
+            </div>
+
+            <h2>فئة الدفع</h2>
+            <div class="options" id="categories-form"></div>
+            <input type="text" id="custom-category" placeholder="اكتب اسم الفئة..." class="hidden">
+
+            <h2>ملاحظات (اختياري)</h2>
+            <textarea id="notes" placeholder="اكتب أي ملاحظات..."></textarea>
+            <small id="notes-counter" style="display:block; text-align:left; margin-top:4px; font-size: 13px;">0 / 100</small>
+
+            <button id="add-purchases" onclick="submitPurchase()">إضافة</button>
+        </div>
+
+        <!-- محول العملات -->
+        <div id="converter" class="hidden">
+            <div class="converter-row">
+                <div class="input-with-image">
+                    <input type="number" id="sar-input" placeholder="المبلغ بـ" />
+                    <img id="sar-img" src="images/sar.png" alt="العملة الرئيسية" />
+                </div>
+                <div class="input-with-image">
+                    <input type="number" id="zar-input" placeholder="المبلغ بـ" />
+                    <img id="zar-img" src="images/zar.png" alt="العملة الأجنبية" />
+                </div>
+            </div>
+            <p>سعر الصرف: 1 <span id="base-currency-label-rate">العملة الرئيسية</span> =
+                <span id="rate">5.04</span>
+                <span id="alt-currency-label-rate">العملة الأجنبية</span>
+            </p>
+        </div>
+        <!-- مخطط الرحلة -->
+        <div id="plan" class="hidden">
+            <!-- أزرار التبويبات -->
+            <div style="text-align: center; margin-bottom: 15px;">
+                <button id="btn-days-tab" class="tab-button active">مخطط الأيام</button>
+                <button id="btn-places-tab" class="tab-button">أماكن وفعاليات</button>
+            </div>
+            <div id="days-section">
+            
+            <hr>
+            <h2>الجدول</h2>
+            <button id="toggle-form-btn" style="margin-bottom: 15px;">إضافة موقع</button>
+            
+            <div id="plan-form-wrapper" style="display: none;">
+                <form id="plan-form">
+                    <label>الاسم*</label>
+                    <input type="text" id="plan-name" required>
+            
+                    <label>الرابط</label>
+                    <input type="url" id="plan-link" placeholder="https://">
+            
+                    <label>الصورة</label>
+                    <input type="file" id="plan-image" accept="image/*">
+            
+                    <label>حدد اليوم*</label>
+                    <input type="number" id="plan-day" min="1" placeholder="ادخل رقم اليوم مثلاً 1" required>
+            
+                    <label>ملاحظة</label>
+                    <textarea id="plan-note" maxlength="100" rows="2" placeholder="بحد أقصى 100 حرف"></textarea>
+            
+                    <label>التقييم</label>
+                    <div id="plan-rating" class="rating-stars">
+                        <span class="star" data-value="1">★</span>
+                        <span class="star" data-value="2">★</span>
+                        <span class="star" data-value="3">★</span>
+                        <span class="star" data-value="4">★</span>
+                        <span class="star" data-value="5">★</span>
+                    </div>
+                    <input type="hidden" id="plan-rating-value" value="0">
+            
+                    <button id="plan-addbutton" type="submit">إضافة</button>
+                    <div id="add-status" style="text-align:center; margin-top:10px; color:green; font-weight:bold;"></div>
+                </form>
+            </div>
+            <div id="plan-searching" style="margin-bottom: 15px;">
+                <i class="fas fa-search" style="font-size: 18px; color: #555;"></i>
+                <input type="text" id="plan-search" placeholder="ابحث هنا..." style="width: 30%; padding: 8px; border-radius: 5px; border: 1px solid #ccc;">
+            </div>
+
+            <div class="plan-table-container">
+                <div id="plan-table"></div>
+                </div>
+            </div>
+            <!-- تبويب الأماكن والفعاليات -->
+            <div id="places-section" style="display: none;">
+                
+            
+                <hr>
+                <h2>الجدول</h2>
+                <button id="toggle-place-form" style="margin-bottom: 15px;">إضافة مكان</button>
+                
+                <div id="place-form-wrapper" style="display: none;">
+                    <form id="place-form">
+
+                        <div class="step" data-step="1">
+                            <label>نوع المكان*</label>
+                            <select id="place-type" required>
+                            <option value="" disabled selected>اختر نوع المكان</option>
+                            <option value="سكن">سكن</option>
+                            <option value="فعالية">فعالية</option>
+                            <option value="كوفي">كوفي</option>
+                            <option value="مطعم">مطعم</option>
+                            <option value="زيارة">زيارة</option>
+                          </select>
+                            <button type="button" onclick="nextStep()">التالي</button>
+                        </div>
+                        
+                        <div class="step" data-step="2">
+                            <label>الاسم*</label>
+                            <div class="step-buttons">
+                            <input type="text" id="place-name" required>
+                                <button type="button" class="next-button" onclick="nextStep()">التالي</button>
+                            </div>
+                            <div class="error-message">إلزامي</div>
+                        </div>
+                
+                        <div class="step" data-step="3" style="display:none">
+                            <label>المدينة</label>
+                            
+                            
+                        <div class="step-buttons">
+                            <button type="button" class="prev-button" onclick="prevStep()">السابق</button>
+                            <input type="text" id="place-city" required>
+                            <button type="button" class="next-button" onclick="nextStep()">التالي</button>
+                        </div>
+                        <div class="error-message">إلزامي</div>
+                        </div>
+                
+                        <div class="step" data-step="4" style="display:none">
+                            <label>الرابط</label>
+                           
+                            <div class="step-buttons">
+                                <button type="button" class="prev-button" onclick="prevStep()">السابق</button>
+                                <input type="url" id="place-link" placeholder="https://">
+                                <button type="button" class="next-button" onclick="nextStep()">التالي</button>
+                            </div>
+                            <button id="skip-button" type="button" onclick="skipStep()">تخطي</button>
+                        </div>
+                
+                        <div class="step" data-step="5" style="display:none">
+                            <label>الصورة</label>
+                            
+                            <div class="step-buttons">
+                                <button type="button" class="prev-button" onclick="prevStep()">السابق</button>
+                                <input type="file" id="place-image" accept="image/*">
+                                <button type="button" class="next-button" onclick="nextStep()">التالي</button>
+                            </div>
+                            <button id="skip-button" type="button" onclick="skipStep()">تخطي</button>
+                        </div>
+                
+                        <div class="step" data-step="6" style="display:none">
+                            <label>ملاحظة</label>
+                            
+                            <div class="step-buttons">
+                                <button type="button" class="prev-button" onclick="prevStep()">السابق</button>
+                                <textarea id="place-note" maxlength="100" rows="2" placeholder="بحد أقصى 100 حرف"></textarea>
+                                <button type="button" class="next-button" onclick="nextStep()">التالي</button>
+                            </div>
+                            <button id="skip-button" type="button" onclick="skipStep()">تخطي</button>
+                        </div>
+                
+                        <div class="step" data-step="7" style="display:none">
+                            <label>التقييم</label>
+                           
+                            <div class="step-buttons">
+                                <button type="button" class="prev-button" onclick="prevStep()">السابق</button>
+                                <div id="place-rating" class="rating-stars">
+                                    <span class="star" data-value="1">★</span>
+                                    <span class="star" data-value="2">★</span>
+                                    <span class="star" data-value="3">★</span>
+                                    <span class="star" data-value="4">★</span>
+                                    <span class="star" data-value="5">★</span>
+                                </div>
+                                <input type="hidden" id="place-rating-value" value="0">
+                                <button id="place-addbutton" type="submit">إضافة</button>
+                            </div>
+                            <div id="place-add-status" style="text-align:center; margin-top:10px; color:green; font-weight:bold;"></div>
+                        </div>
+                    </form>
+                </div>
+                <div id="place-rate" style="margin-bottom: 10px; display: flex; gap: 10px; align-items: center;">
+                    <select id="place-sort-selector" onchange="applyPlaceSorting()">
+                    <option value="">🔽 ترتيب حسب</option>
+                    <option value="city">🏙️ المدينة</option>
+                    <option value="host">🧑‍🤝‍🧑 المضيف</option>
+                    <option value="rating">⭐ التقييم</option>
+                  </select>
+                
+                    <select id="city-filter" onchange="applyPlaceSorting()" style="display: none;">
+                    <option value="">كل المدن</option>
+                  </select>
+                
+                    <select id="type-filter" onchange="applyPlaceSorting()" style="display: none;">
+                    <option value="">كل الأنواع</option>
+                  </select>
+                
+                    <select id="rating-sort-order" onchange="applyPlaceSorting()" style="display: none;">
+                    <option value="">كل التقييمات</option>
+                    <option value="desc">🌟 الأعلى تقييم</option>
+                    <option value="asc">⭐ الأقل تقييم</option>
+                  </select>
+                
+                    <select id="rating-filter" onchange="applyPlaceSorting()" style="display: none;">
+                    <option value="">كل التقييمات</option>
+                    <option value="1">⭐ نجمة واحدة</option>
+                    <option value="2">⭐⭐ نجمتين</option>
+                    <option value="3">⭐⭐⭐ ثلاث نجوم</option>
+                    <option value="4">⭐⭐⭐⭐ أربع نجوم</option>
+                    <option value="5">⭐⭐⭐⭐⭐ خمس نجوم</option>
+                  </select>
+                </div>
+                <div id="places-table-container"></div>
+            </div>
+        </div>
+        <!-- جدول المشتريات -->
+        <div id="entries" class="hidden">
+            <div class="entries-controls">
+                <input type="text" id="search-input" placeholder="بحث..." />
+                <button onclick="enableEditing()">✏️</button>
+                <button onclick="exportToPDF()">📄</button>
+            
+                <select id="font-size-selector">
+                    <option value="4px">4</option>
+                    <option value="5px">5</option>
+                    <option value="6px">6</option>
+                    <option value="7px">7</option>
+                    <option value="8px">8</option>
+                    <option value="10px">10</option>
+                    <option value="12px">12</option>
+                    <option value="14px">14</option>
+                    <option value="16px" selected>16</option>
+                    <option value="18px">18</option>
+                    <option value="20px">20</option>
+                </select>
+            
+                <button id="apply-edits" class="hidden" onclick="submitEdits()">✔ تنفيذ التعديلات</button>
+                <select id="sort-selector" onchange="applySorting()" style="margin-right: 10px;">
+                  <option value="timestamp-desc">📅 الأحدث</option>
+                  <option value="timestamp-asc">📅 الأقدم</option>
+                  <option value="amount-desc">💰 المبلغ الأعلى</option>
+                  <option value="amount-asc">💰 المبلغ الأقل</option>
+                  <option value="category">🏷️ الفئة</option>
+                  <option value="currency">💱 العملة</option>
+                  <option value="payer">🧾 من دفع</option>
+                  <option value="host">🧑‍🤝‍🧑 المضيف</option>
+                </select>
+            </div>
+          <div class="table-container">
+            <table id="entries-table">
+                <thead>
+                    <tr>
+                        <th>المضيف</th>
+                        <th>من دفع</th>
+                        <th>المبلغ</th>
+                        <th>العملة</th>
+                        <th>الفئة</th>
+                        <th>الملاحظات</th>
+                        <th>الوقت</th>
+                        <th class="edit-col hidden">🗑️</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+          </div>
+        </div>
+    </div>
+    <!-- نافذة عرض الصورة -->
+    <div id="image-modal" class="image-modal">
+        <div class="image-modal-content">
+            <button id="plan-CloseImg" class="close-button" onclick="closeModal()">×</button>
+            <img id="modal-image" src="" alt="عرض الصورة">
+        </div>
+    </div>
+
+    <script src="script.js?v=9"></script>
+    <script>
+        fetch("get-title.php?v=" + Date.now())
+      .then(res => res.text())
+      .then(title => {
+        document.getElementById("page-title").textContent = title.trim();
+        document.title = title.trim() + " - مصروفات السفر";
+      });
+
+    // جلب اسم المستخدم من localStorage لعرضه في مرحباً
+    const userName = localStorage.getItem("userName");
+    if (userName) {
+      document.getElementById("welcome-user").textContent = userName;
+    }
+    </script>
+    
+</body>
+
+</html>

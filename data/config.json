@@ -1,0 +1,35 @@
+{
+    "budget": 25944,
+    "rate": 4.86,
+    "currency_main": "ريال",
+    "currency_alt": "راند",
+    "people": [
+        "صالح",
+        "أبوتميم",
+        "فارس",
+        "أبوسمو"
+    ],
+    "categories": [
+        "الطيران",
+        "السكن",
+        "المطاعم",
+        "الكوفيهات",
+        "التموينات",
+        "البنزين",
+        "السيارة",
+        "الفعاليات",
+        "أخرى"
+    ],
+    "colors": {
+        "title": "#0a4473",
+        "title_text": "#ffffff",
+        "categories_bg": "#3ca370",
+        "people_bg": "#444444",
+        "number_bg": "#ffffff",
+        "number_text": "#000000",
+        "payers_bg": "#7e7e7e",
+        "categories_form_bg": "#7e7e7e",
+        "payers_text": "#ffffff",
+        "body_bg": "#f5f5f5"
+    }
+}
